@@ -1,0 +1,98 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-size: 14px;
+
+    background: #dcd8de;
+}
+ul
+{
+    list-style: none;
+}
+.banner_wrap
+{
+    position: relative;
+    overflow: hidden;
+
+    width: 520px;
+    height: 280px;
+    margin: 50px auto;
+
+    border: 3px solid #999;
+}
+.banner
+{
+    position: relative;
+    left: -520px;
+/* 把假象图扔出去  默认看到第一张图*/
+    width: 5200px;
+
+   /*  -webkit-transition: all 1s;//过渡动画
+           transition: all 1s;//由于假象图 因此要在js文件上添加过渡 */
+}
+.banner img
+{
+    float: left;
+}
+.circle
+{
+    position: absolute;
+    bottom: 20px;
+    left: 35%;
+}
+.circle li
+{
+    float: left;
+
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+
+    border-radius: 50%;
+    background: #fff;
+}
+.circle li.active
+{
+    background: orange;
+}
+.banner_wrap .btn
+{
+    position: absolute;
+    top: 50%;
+
+    display: none;
+
+    width: 35px;
+    height: 80px;
+    margin-top: -40px;
+
+    opacity: .7;
+    background: url(../images/btn.png) no-repeat;
+}
+.banner_wrap:hover .btn
+{
+    display: block;
+}
+.banner_wrap .btn:hover
+{
+    opacity: 1;
+}
+
+.banner_wrap .prev
+{
+    left: 0;
+
+    background-position: -72px 0;
+}
+
+
+.banner_wrap .next
+{
+    right: 0;
+
+    background-position: 0 0;
+}
